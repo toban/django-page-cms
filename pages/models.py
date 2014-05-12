@@ -515,7 +515,7 @@ class Content(models.Model):
         try:
             return "{0} :: {1}".format(self.page.slug(), self.body[0:15])
         except UnicodeEncodeError, e:
-            return "{0} :: {1}".format(self.page.slug(), '')
+            return "{0} :: {1}".format(self.page.slug(), str(e))
         
 
 @python_2_unicode_compatible
